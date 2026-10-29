@@ -1,25 +1,49 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import AlgorithmList from "./components/Algorithm/AlgorithmList";
+import AlgorithmDetail from "./components/Algorithm/AlgorithmDetail";
+import { categories, getAllAlgorithms } from "./data";
 
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+      <h1>📚 DSA Playbook</h1>
+      <p className="subtitle">
+        A curated collection of data structures and algorithms in JavaScript.
+      </p>
+      <div className="home-stats">
+        <div className="stat">
+          <strong>{categories.length}</strong>
+          <span>Categories</span>
+        </div>
+        <div className="stat">
+          <strong>{getAllAlgorithms().length}</strong>
+          <span>Algorithms</span>
+        </div>
+        <div className="stat">
+          <strong>
+            {getAllAlgorithms().reduce((s, a) => s + a.programs.length, 0)}
+          </strong>
+          <span>Programs</span>
+        </div>
+      </div>
     </div>
   );
+}
+function App() {
+  
+return (
+     <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="category/:categoryId" element={<AlgorithmList />} />
+        <Route path="algorithm/:algoId" element={<AlgorithmDetail />} />
+        <Route path="search" element={<AlgorithmList />} />
+      </Route>
+    </Routes>
+  );
+
 }
 
 export default App;
