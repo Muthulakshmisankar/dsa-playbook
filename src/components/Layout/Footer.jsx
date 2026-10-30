@@ -12,7 +12,7 @@ const AUTHOR = {
   linkedin: "https://linkedin.com/in/muthulakshmisivasankarasubramanian",
 };
 
-const REPO_URL = "https://github.com/yourusername/dsa-playbook";
+const REPO_URL = "https://github.com/Muthulakshmisankar/dsa-playbook";
 const LICENSE_URL = `${REPO_URL}/blob/main/LICENSE`;
 
 export default function Footer() {
