@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { getAlgorithm, algorithms } from "../../data";
 import ProgramViewer from "./ProgramViewer";
+import SEO from 'metaforge-seo';
 
 export default function AlgorithmDetail() {
   const { algoId } = useParams();
@@ -16,6 +17,14 @@ export default function AlgorithmDetail() {
   }
 
   return (
+    <>
+    <SEO 
+        title={`${algo.name} | DSA Playbook`}
+        description={algo.description}
+        ogTitle={algo.name}
+        ogDescription={algo.description}
+        ogUrl={`https://javascriptdsaplaybook.netlify.app/algorithm/${algo.id}`}></SEO>
+  
     <article className="algo-detail">
       <header className="algo-detail-header">
         <div className="breadcrumb">
@@ -77,5 +86,6 @@ export default function AlgorithmDetail() {
         </section>
       )}
     </article>
+      </>
   );
 }

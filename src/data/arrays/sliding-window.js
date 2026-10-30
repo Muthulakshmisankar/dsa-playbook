@@ -42,10 +42,11 @@ export default {
   let windowSum = 0;
   for (let i = 0; i < k; i++) windowSum += arr[i];
 
-  let maxSum = windowSum;
-  for (let i = k; i < arr.length; i++) {
-    windowSum += arr[i] - arr[i - k];
-    maxSum = Math.max(maxSum, windowSum);
+  let maxSum = windowSum; //Store the first window's sum as the current maximum.
+
+  for (let i = k; i < arr.length; i++) { //Add the new element entering the window: arr[i]
+    windowSum += arr[i] - arr[i - k]; //Subtract the old element leaving the window: arr[i - k]
+    maxSum = Math.max(maxSum, windowSum);   //Update maxSum if the new window sum is larger
   }
   return maxSum;
 }`,

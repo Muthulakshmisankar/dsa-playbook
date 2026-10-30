@@ -2,8 +2,15 @@
 
 > A curated, interactive collection of data structures and algorithms in JavaScript — organized by pattern, with runnable code, complexity analysis, and real-world examples.
 
-**🌐 Live Demo:** [javascriptdsaplaybook.netlify.app](https://javascriptdsaplaybook.netlify.app/)
+/**
+ * 
+ *
+ * Author: Muthulakshmi [(https://github.com/Muthulakshmisankar)]
+ * **🌐 Live Demo:** [javascriptdsaplaybook.netlify.app](https://javascriptdsaplaybook.netlify.app/)
 
+ *
+ * 
+ */
 ---
 
 ## ✨ Features
@@ -432,3 +439,12 @@ If this project helped you prepare for an interview, learn a new pattern, or jus
 [⬆ Back to Top](#-dsa-playbook--javascript)
 
 </div>
+
+/**
+ * 
+ *
+ * Author: Muthulakshmi [(https://github.com/Muthulakshmisankar)]
+ * Source: https://javascriptdsaplaybook.netlify.app/
+ *
+ * 
+ */
