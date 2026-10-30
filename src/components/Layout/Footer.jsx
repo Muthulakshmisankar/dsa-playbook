@@ -7,10 +7,9 @@ import { Link } from "react-router-dom";
 
 // 🔧 CONFIGURE YOUR INFO HERE
 const AUTHOR = {
-  name: "Your Name",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  portfolio: "https://yoursite.com",
+  name: "Muthulakshmi",
+  github: "https://github.com/Muthulakshmisankar",
+  linkedin: "https://linkedin.com/in/muthulakshmisivasankarasubramanian",
 };
 
 const REPO_URL = "https://github.com/yourusername/dsa-playbook";
