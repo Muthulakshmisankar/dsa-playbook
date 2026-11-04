@@ -5,7 +5,7 @@ export default function ProgramViewer({ programs , algoId }) {
   const [active, setActive] = useState(0);
   const prog = programs[active];
   useEffect(()=>{
-    setActive(0)
+    setActive(0)q                                                 
   },[algoId])
   return (
     <div className="program-viewer">
